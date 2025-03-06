@@ -40,7 +40,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- Specify the main class -->
-                    <mainClass>com.example.MyApp</mainClass> <!-- Replace with your actual main class -->
+                    <mainClass>com.example.MyApp</mainClass> <!-- Ensure this is correct -->
                 </configuration>
             </plugin>
 
@@ -50,8 +50,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <source>21</source> <!-- Use Java 21 source compatibility -->
-                    <target>21</target> <!-- Use Java 21 target compatibility -->
+                    <source>17</source> <!-- Use Java 17 source compatibility -->
+                    <target>17</target> <!-- Use Java 17 target compatibility -->
                 </configuration>
             </plugin>
         </plugins>
@@ -59,6 +59,6 @@
 
     <!-- Additional Properties -->
     <properties>
-        <java.version>21</java.version> <!-- Specify the Java version you're using -->
+        <java.version>17</java.version> <!-- Align with OpenJDK 17 in Docker -->
     </properties>
 </project>
