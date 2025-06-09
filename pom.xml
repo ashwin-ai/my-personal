@@ -52,9 +52,14 @@
                 </configuration>
             </plugin>
 
-            <!-- Spring Boot Maven plugin with main class specified -->
+            <!-- Spring Boot Maven plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <mainClass>com.example.MyApp</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
