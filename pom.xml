@@ -61,12 +61,12 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>repackage</goal> <!-- 👈🏽 Required for executable JAR -->
+                            <goal>repackage</goal> <!-- Required for executable JAR -->
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.example.MyApp</mainClass> <!-- 👈🏽 Your main class -->
+                    <mainClass>com.example.MyApp</mainClass> <!-- Your main class -->
                 </configuration>
             </plugin>
         </plugins>
