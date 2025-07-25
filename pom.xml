@@ -15,23 +15,24 @@
 
     <properties>
         <java.version>21</java.version>
+        <spring-boot.version>3.1.4</spring-boot.version>
     </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.4</version>
-        <relativePath/>
+        <version>${spring-boot.version}</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <dependencies>
-        <!-- Spring Boot Web starter -->
+        <!-- Spring Boot Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Testing dependency -->
+        <!-- Spring Boot Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -41,7 +42,7 @@
 
     <build>
         <plugins>
-            <!-- Compiler plugin -->
+            <!-- Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -52,14 +53,23 @@
                 </configuration>
             </plugin>
 
-            <!-- Spring Boot Maven plugin -->
+            <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal> <!-- 👈🏽 Required for executable JAR -->
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <mainClass>com.example.MyApp</mainClass>
+                    <mainClass>com.example.MyApp</mainClass> <!-- 👈🏽 Your main class -->
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>
