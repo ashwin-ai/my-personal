@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    environment 
+    environment {
         MAVEN_HOME = tool 'Maven 3.9.9'
         IMAGE_NAME = '18121984/test1'
         DEPLOYMENT_NAME = 'springboot-app'
